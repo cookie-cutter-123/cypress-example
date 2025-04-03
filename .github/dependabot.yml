@@ -1,22 +1,9 @@
 version: 2
 updates:
-  # Check for updates to Maven dependencies
-  - package-ecosystem: "maven"
-    directory: "/" # Location of pom.xml
-    schedule:
-      interval: "weekly" # Check for updates once a week
-    open-pull-requests-limit: 10
-    commit-message:
-      prefix: "dependencies"
-    labels:
-      - "dependencies"
-      - "automated-update"
-
-  # Check for updates to GitHub Actions
   - package-ecosystem: "github-actions"
-    directory: "/.github/workflows" # Location of the GitHub Actions workflows
+    directory: "/.github/workflows"
     schedule:
-      interval: "weekly" # Check for updates once a week
+      interval: "weekly"
     open-pull-requests-limit: 10
     commit-message:
       prefix: "workflows"

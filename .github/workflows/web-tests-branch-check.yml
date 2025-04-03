@@ -1,16 +1,11 @@
 name: End-to-end tests
-on:
-  push:
-    branches:
-      - feature/aqa-865
+on: push
 jobs:
   cypress-run:
     runs-on: ubuntu-22.04
     steps:
       - name: Checkout
         uses: actions/checkout@v3
-      # Install npm dependencies, cache them correctly
-      # and run all Cypress tests
       - name: Install Dependencies
         run: npm install
       - name: Cypress run

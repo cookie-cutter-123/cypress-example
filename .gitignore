@@ -42,9 +42,6 @@ credentials.json
 # Node
 node_modules/
 
-# Package lock
-/package-lock.json
-
 # Legacy Antora docs
 docs/
 

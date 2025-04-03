@@ -40,6 +40,9 @@ export class ConfigLoader {
 
   constructor() {
     const configFile = Cypress.env('configFile') || 'it';
+    if (!configs[configFile]) {
+      throw new Error(`Unknown config file: ${configFile}`);
+    }
     this.config = configs[configFile];
   }
 }
