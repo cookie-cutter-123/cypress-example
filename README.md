@@ -1,6 +1,6 @@
-# web-tests
+# cypress-example
 
-Project for end-to-end web tests.
+The purpose of this project is to test and show the basic functionalities of Cypress.
 
 ## Getting started
 

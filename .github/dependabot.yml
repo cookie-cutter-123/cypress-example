@@ -1,5 +1,6 @@
 version: 2
 updates:
+  # Keep GitHub Actions up to date
   - package-ecosystem: "github-actions"
     directory: "/.github/workflows"
     schedule:
@@ -9,4 +10,16 @@ updates:
       prefix: "workflows"
     labels:
       - "workflows"
+      - "automated-update"
+
+  # Keep npm dependencies up to date
+  - package-ecosystem: "npm"
+    directory: "/" # location of package.json and package-lock.json
+    schedule:
+      interval: "weekly"
+    open-pull-requests-limit: 10
+    commit-message:
+      prefix: "deps"
+    labels:
+      - "dependencies"
       - "automated-update"
